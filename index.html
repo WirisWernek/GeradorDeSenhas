@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <title>Gerador de Senhas</title>
+</head>
+
+<body>
+    <div style=" display: flex;align-items: center;justify-content: center;  ">
+
+        <div class="container row" id="container">
+            <form id="formulario" method="post">
+                <h2 align="center">Gerador de Senhas</h2>
+                <div class="align-items-center ">
+                    <label>Força:</label>
+                    <br>
+                    <input class=" form-check-input mt-0" type="radio" name="force" id="weak" value="26" required>
+                    <label for="weak">Fraco</label>
+                    <br>
+
+                    <input class="form-check-input mt-0" type="radio" name="force" id="average" value="62">
+                    <label for="average">Médio</label>
+                    <br>
+
+                    <input class="form-check-input mt-0" type="radio" name="force" id="strong" value="90">
+                    <label for="strong">Forte</label>
+                    <br><br>
+
+                    <label for="size">Tamanho: </label><span id="span" style="text-align: center;"></span>
+                    <br>
+
+                    <input class="form-range" type="range" name="size" id="size" min="4" max="256" style="width: 100%;">
+                    <br>
+
+                    <div align="center">
+                        <input class="btn btn-success botoes" type="button" value="Gerar Senha" onclick="Generate()">
+                    </div>
+
+                </div>
+                <div align="center">
+                    <br>
+                    <textarea class="form-control" id="password" rows="7" cols="10" readonly></textarea>
+                    <button class="btn btn-primary botoes" type='button' onclick="CopiarTexto()"><img width="20"
+                            src="./images/copy-icon.png" alt="Ícone de cópia">
+                        Copiar</button>
+
+                </div>
+            </form>
+            <div class="align-items-center" style="text-align: center; margin-bottom: 25px;">
+                <br>
+                <p>Fraco: Contém letras minúsculas.</p>
+                <p>Médio: Contém letras minúsculas, maiúsculas e números.</p>
+                <p>Forte: Contém letras minúsculas, maiúsculas, números e símbolos.</p>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
