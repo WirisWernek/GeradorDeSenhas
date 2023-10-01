@@ -1,4 +1,4 @@
-# Gerador de Senhas ![version](https://img.shields.io/badge/version-0.2.0-blue)
+# Gerador de Senhas ![version](https://img.shields.io/badge/version-1.0.0-blue)
 
 ## Sobre
 
